@@ -1,0 +1,28 @@
+# Python virtual environment
+venv/
+ENV/
+env/
+
+# SQLite database (contains your personal chat history)
+*.db
+*.sqlite3
+
+# Python bytecode and cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Operating System files
+.DS_Store
+Thumbs.db
+
+# Flask/Instance folders
+instance/
+.webassets-cache
+
+# VS Code specific files (optional, but recommended)
+.vscode/
+.history/
+
+# Environment variables / API Keys
+.env

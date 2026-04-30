@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Workspace</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="light">
+    <div class="app-container">
+        
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <button id="newChatBtn" class="new-chat-btn">
+                    <span><i class="fas fa-edit"></i> New chat</span>
+                    <i class="fas fa-pen-to-square"></i>
+                </button>
+            </div>
+            
+            <div class="history-list-container">
+                <div class="history-label">Recents</div>
+                <div class="history-list" id="historyList">
+                    <!-- Chat histories populate here -->
+                </div>
+            </div>
+
+            <div class="sidebar-footer" style="justify-content: flex-end;">
+                <button id="themeToggle" class="icon-btn theme-btn" title="Toggle Theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Chat Area -->
+        <main class="chat-main">
+            <!-- Top Nav -->
+            <header class="chat-header">
+                <h2 id="currentChatTitle" class="dropdown-title">New Chat <i class="fas fa-chevron-down" style="font-size: 10px; color: #888;"></i></h2>
+            </header>
+            
+            <div class="chat-wrapper">
+                <!-- Welcome Screen -->
+                <div id="welcomeScreen" class="welcome-screen">
+                    <h1>Ready when you are.</h1>
+                </div>
+
+                <div class="chat-box" id="chatBox">
+                    <!-- Messages go here -->
+                </div>
+            </div>
+
+            <!-- Input Area -->
+            <div class="input-area">
+                <div class="input-container">
+                    
+                    <!-- PDF Indicator -->
+                    <div id="attachmentIndicator" class="attachment-indicator hidden">
+                        <div class="file-icon"><i class="fas fa-file-pdf"></i></div>
+                        <span id="attachedFileName">document.pdf</span>
+                        <button onclick="clearAttachment()"><i class="fas fa-times"></i></button>
+                    </div>
+
+                    <div class="input-wrapper">
+                        <!-- Plus Menu Container -->
+                        <div class="plus-menu-container">
+                            <button class="icon-btn plus-btn" id="plusBtn" title="Tools">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                            
+                            <!-- The Dropdown Menu (No Dummy Features) -->
+                            <div class="plus-dropdown hidden" id="plusDropdown">
+                                <button class="menu-item" onclick="document.getElementById('pdfInput').click()">
+                                    <i class="fas fa-paperclip"></i> Add photos & files
+                                </button>
+                                <button class="menu-item" id="thinkingToggleBtn">
+                                    <i class="fas fa-lightbulb"></i> Thinking Mode
+                                </button>
+                            </div>
+                        </div>
+
+                        <input type="file" id="pdfInput" accept="application/pdf" class="hidden">
+                        
+                        <textarea id="userInput" placeholder="Ask anything" rows="1"></textarea>
+                        
+                        <div class="right-actions">
+                            <button class="icon-btn" id="voiceBtn" title="Voice Typing"><i class="fas fa-microphone"></i></button>
+                            <button class="icon-btn send-btn" id="sendBtn" title="Send" disabled>
+                                <i class="fas fa-arrow-up"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-text">
+                    AI can make mistakes. Check important info.
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-cpp.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-java.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
