@@ -58,7 +58,7 @@ This workspace is optimized for **Software Engineering workflows, DSA practice, 
 
 ### 1️⃣ Clone Repository
 ```bash
-git clone https://github.com/YashvanthG/AI-ChatBot.git
+git clone https://github.com/kagulajahnavi/AIChatBot
 cd AI-ChatBot
 ```
 
@@ -152,8 +152,8 @@ See `LICENSE` for more details.
 
 ## 👨‍💻 Author
 
-**Yashvanth G**  
-🔗 https://github.com/YashvanthG  
+**Jahnavi**  
+🔗 https://github.com/kagulajahnavi
 
 ---
 
